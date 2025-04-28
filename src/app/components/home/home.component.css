@@ -1,7 +1,5 @@
-/* styles.css sau home.component.css */
 .main-content {
     margin-top: 250px;
-    /* Ajustează în funcție de înălțimea header-ului */
     padding: 20px;
     max-width: 1200px;
     margin-left: auto;
@@ -44,7 +42,6 @@ button {
     cursor: pointer;
 }
 
-/* Updated dessert card styles to match coffee cards */
 .dessert-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

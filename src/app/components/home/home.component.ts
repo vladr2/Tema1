@@ -29,14 +29,14 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.coffees = this.coffeeService.getCoffees();
-    this.filteredCoffees = this.coffees; // Display all coffees initially
+    this.filteredCoffees = this.coffees;
   }
 
   onSearch(searchTerm: string) {
     this.searchTerm = searchTerm;
     if (this.searchTerm.trim() === '') {
-      this.filteredCoffees = this.coffees; // Reset to all coffees if search term is empty
-      this.filteredDesserts = this.desserts; // Reset to all desserts if search term is empty
+      this.filteredCoffees = this.coffees;
+      this.filteredDesserts = this.desserts;
     } else {
       this.filteredCoffees = this.coffees.filter(coffee =>
         coffee.name.toLowerCase().includes(this.searchTerm.toLowerCase())

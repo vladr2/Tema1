@@ -13,10 +13,10 @@ import { CommonModule } from '@angular/common';
 })
 export class CoffeeListComponent {
   searchTerm = signal('');
-  coffees = signal<Coffee[]>([]); // Initialize with an empty array
+  coffees = signal<Coffee[]>([]);
 
   constructor(private coffeeService: CoffeeService) {
-    this.coffees.set(this.coffeeService.getCoffees()); // Initialize after coffeeService is available
+    this.coffees.set(this.coffeeService.getCoffees());
   }
 
   onSearch() {
