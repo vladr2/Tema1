@@ -1,0 +1,47 @@
+/* header.component.css */
+.static-header {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.static-header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.welcome-banner {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #444;
+}
+
+.selected-coffee {
+    text-align: center;
+    padding: 10px;
+    background-color: #555;
+}

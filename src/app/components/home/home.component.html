@@ -1,0 +1,35 @@
+<!-- home.component.html -->
+<app-header></app-header>
+
+<div class="main-content">
+    <app-search (search)="onSearch($event)" #searchComponent></app-search>
+    <div *ngIf="selectedProduct" class="selected-product">
+        Selected product: {{ selectedProduct }}
+    </div>
+
+    <section class="special-coffee">
+        <h2>OUR SPECIAL COFFEE</h2>
+        <div class="coffee-grid">
+            <div *ngFor="let coffee of filteredCoffees" class="coffee-card">
+                <img [src]="coffee.image" [alt]="coffee.name">
+                <h3>{{ coffee.name }}</h3>
+                <p>{{ coffee.description }}</p>
+                <p class="price">Rs.{{ coffee.price }}</p>
+                <button (click)="onOrderNow(coffee.name)">Order Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="special-dessert">
+        <h2>OUR SPECIAL DESSERT</h2>
+        <div class="dessert-grid">
+            <div *ngFor="let dessert of filteredDesserts" class="dessert-card">
+                <img [src]="dessert.image" [alt]="dessert.name">
+                <h3>{{ dessert.name }}</h3>
+                <p>{{ dessert.description }}</p>
+                <p class="price">Rs.{{ dessert.price }}</p>
+                <button (click)="onOrderNow(dessert.name)">Order Now</button>
+            </div>
+        </div>
+    </section>
+</div>

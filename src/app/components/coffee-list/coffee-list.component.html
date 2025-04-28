@@ -1,0 +1,16 @@
+<app-search [(ngModel)]="searchTerm" (search)="onSearch()"></app-search>
+
+<section class="special-coffee">
+    <h2>OUR SPECIAL COFFEE</h2>
+    <div class="coffee-grid">
+        @for (coffee of coffees(); track coffee.id) {
+        <div class="coffee-card">
+            <img [src]="'assets/images/' + coffee.image" [alt]="coffee.name">
+            <h3>{{ coffee.name }}</h3>
+            <p>{{ coffee.description }}</p>
+            <p class="price">Rs.{{ coffee.price }}</p>
+            <button (click)="onOrderNow(coffee.name)">Order Now</button>
+        </div>
+        }
+    </div>
+</section>

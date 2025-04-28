@@ -1,0 +1,24 @@
+<header class="static-header">
+    <nav>
+        <a class="logo">Coffee</a>
+        <div class="nav-links">
+            <a>HOME</a>
+            <a>COFFEE</a>
+            <a>MAKERY</a>
+            <a>SHOP</a>
+            <a>ABOUT</a>
+            <a>LOGIN</a>
+        </div>
+    </nav>
+
+    <div class="welcome-banner">
+        <h1>Welcome!</h1>
+        <p>We serve the richest coffee in the city!</p>
+    </div>
+
+    @if (selectedCoffee) {
+    <div class="selected-coffee">
+        Selected: {{ selectedCoffee }}
+    </div>
+    }
+</header>
